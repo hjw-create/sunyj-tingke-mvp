@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>操场停开核对单 · 孙艺嘉</title>
+<style>
+:root{--g:#2f6b52;--g2:#3d8a68;--bg:#f4faf6;--ink:#1a2e24;--line:#c5ddd0;--warn:#8a5a2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(165deg,#e8f5ee,#f4faf6 45%,#fff);color:var(--ink);line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 64px}
+.kicker{font-size:12px;color:var(--g);font-weight:700;letter-spacing:.08em}
+h1{font-size:1.55rem;margin:8px 0 10px;color:var(--g)}
+.lead{color:#3a5348}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:#5a7266}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.card h2{margin:0 0 10px;color:var(--g);font-size:1.05rem}
+.bound span{display:block;background:#eef7f1;border-left:3px solid var(--g);padding:8px 12px;margin:6px 0}
+.g3{display:grid;gap:10px}@media(min-width:640px){.g3{grid-template-columns:repeat(3,1fr)}}
+.risk{padding:12px;border:1px dashed var(--line);border-radius:12px;background:#fafdfb}
+.risk b{display:block;color:var(--g);margin-bottom:4px}
+.q{margin:0 0 10px;padding:10px 12px;background:#eef7f1;border-left:3px solid var(--g);border-radius:0 10px 10px 0;color:#3a5348}
+.q cite{display:block;margin-top:4px;font-size:12px;color:#5a7266;font-style:normal}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:10px 10px 10px 44px;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;background:#fafdfb}
+.steps li::before{content:counter(s);position:absolute;left:10px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--g);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+label.ck{display:flex;gap:8px;padding:8px;border:1px solid var(--line);border-radius:10px;margin:6px 0;background:#fafdfb;cursor:pointer}
+.field{margin:8px 0}.field>span{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit}
+textarea{min-height:64px}.row2{display:grid;gap:10px}@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.btn{background:var(--g);color:#fff;border:0;padding:12px 18px;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:disabled{opacity:.45}.btn-g{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.err{color:#a33;display:none}.hint{font-size:.82rem;color:#5a7266}
+.list{list-style:none;padding:0}.list li{border:1px solid var(--line);border-radius:10px;padding:10px;margin:6px 0;background:#fafdfb}
+.warn{padding:12px 14px;border-radius:12px;background:#fff8ee;border-left:6px solid var(--warn);margin:14px 0}
+footer{margin-top:20px;font-size:12px;color:#5a7266}
+.bar{height:8px;background:#d7e8de;border-radius:999px;overflow:hidden;margin:6px 0}.bar>i{display:block;height:100%;width:0;background:var(--g)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">沈阳农业大学 · 应用气象学 · 课程 MVP</div>
+  <h1>操场停开先勾这张单</h1>
+  <p class="lead">给<strong>体育课与晨训组织者</strong>：雷雨/大风来临前，先对照公开预报、记下当场天况、写清谁同意继续。本页<strong>不代替</strong>学校应急通知，<strong>不对外发布预警</strong>，<strong>不卖</strong>气象设备。</p>
+  <div class="chips">
+    <span class="chip">孙艺嘉 · 2024111013</span>
+    <span class="chip">操场停开核对单（体育课/晨训）</span>
+    <span class="chip">路径 B · 绿色轻工具</span>
+  </div>
+  <div class="cta">
+    <a class="btn" href="#node">勾停开五项</a>
+    <a class="btn btn-g" href="#obs">记当场天况</a>
+    <a class="btn btn-g" href="#book">预约试填</a>
+  </div>
+
+  <div class="warn"><strong>边界三句：</strong>只做组织者自用留痕；对照公开预报，不编预警；停或不停仍由现场老师/组织者决定。</div>
+
+  <div class="g3">
+    <div class="risk"><b>预报抄得下</b>公开预报里的雷雨、大风、强对流，用人话抄进表，不另做预报。</div>
+    <div class="risk"><b>当场看一眼</b>云、风、雷、积水有没有，写一句，第二天还能对上。</div>
+    <div class="risk"><b>谁同意继续</b>访谈原话：表要能留下“谁点头继续”，别只靠群里催。</div>
+  </div>
+
+  <div class="card">
+    <h2>要对上的三件事</h2>
+    <blockquote class="q">操场边决定停不停课，缺一份写着预报、当场天况和谁同意继续的核对单。<cite>第1周假设</cite></blockquote>
+    <blockquote class="q">一页纸可以课前填，别弄成一堆表。<cite>FT-01 体育委员</cite></blockquote>
+    <blockquote class="q">不要替学校发停课令，也不要配测风仪。<cite>第3周边界 · 部分成立</cite></blockquote>
+    <h2>三步上手</h2>
+    <ol class="steps">
+      <li>勾齐停开五项（预报、当场、同意人、场地、边界）。</li>
+      <li>记一条当场天况（人话，不写预警级别）。</li>
+      <li>愿试填就留11位手机，课前当面演示。</li>
+    </ol>
+  </div>
+
+  <div class="card" id="node">
+    <h2>停开核对五项</h2>
+    <p class="hint">五项勾齐才能保存。目标：课前打开就能说清预报、天况、谁点头。</p>
+    <div class="bar"><i id="bar"></i></div>
+    <p class="hint" id="barText">已看 0 / 5</p>
+    <form id="nodeForm">
+      <label class="ck"><input type="checkbox" name="c1"/> 已对照公开预报：本场有无雷雨/大风/强对流提示（只抄录，不另做预报）</label>
+      <label class="ck"><input type="checkbox" name="c2"/> 已看当场天况：云、风、雷、积水是否需要写一句</label>
+      <label class="ck"><input type="checkbox" name="c3"/> 已写清谁同意继续或停开（老师/体育委员/晨训组织者）</label>
+      <label class="ck"><input type="checkbox" name="c4"/> 场地情况已记（操场/跑道是否积水或风大到难站稳）</label>
+      <label class="ck"><input type="checkbox" name="c5"/> 边界自检：不代替学校通知、不对外预警、不卖气象设备</label>
+      <div class="row2">
+        <label class="field"><span>场次</span>
+          <select name="kind" required>
+            <option value="">请选择</option>
+            <option>体育选修课</option>
+            <option>晨训</option>
+            <option>体育部活动</option>
+          </select>
+        </label>
+        <label class="field"><span>日期</span><input type="date" name="day" required/></label>
+      </div>
+      <div class="row2">
+        <label class="field"><span>填写人</span><input name="who" required placeholder="体育委员 / 晨训组织者"/></label>
+        <label class="field"><span>预报原文（人话）</span><input name="fc" placeholder="例如：午后有雷阵雨"/></label>
+      </div>
+      <button class="btn" type="submit">保存核对到本机</button>
+      <p class="err" id="nodeErr"></p>
+    </form>
+  </div>
+
+  <div class="card" id="obs">
+    <h2>当场天况一笔</h2>
+    <form id="obsForm">
+      <div class="row2">
+        <label class="field"><span>看见什么</span>
+          <select name="see" required>
+            <option value="">请选择</option>
+            <option>天色尚可，风不大</option>
+            <option>云压得低 / 有雷声</option>
+            <option>风大到说话费劲或积水</option>
+            <option>当时没看清，稍后补</option>
+          </select>
+        </label>
+        <label class="field"><span>决定</span>
+          <select name="dec" required>
+            <option value="">请选择</option>
+            <option>继续（有同意人）</option>
+            <option>停开/改室内</option>
+            <option>推迟观察10分钟</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span>一句备注</span><textarea name="note" placeholder="例如：西边有雷，老师同意先做准备活动。"></textarea></label>
+      <button class="btn" type="submit">保存这条天况</button>
+      <p class="hint">不写预警级别、不写保证安全。</p>
+    </form>
+  </div>
+
+  <div class="card" id="book">
+    <h2>预约当面试填</h2>
+    <form id="bookForm">
+      <div class="row2">
+        <label class="field"><span>称呼</span><input name="name" required placeholder="体育委员 / 老师"/></label>
+        <label class="field"><span>手机号</span><input name="phone" maxlength="11" required placeholder="11位"/></label>
+      </div>
+      <label class="field"><span>方便时段</span>
+        <select name="slot"><option>体育选修课前</option><option>晨训后</option><option>周末补演示</option></select>
+      </label>
+      <button class="btn" type="submit">留下预约（仅存本机）</button>
+      <p class="err" id="bookErr"></p>
+      <p class="hint">孙艺嘉 · 13130517559 · 农学院应用气象学。预约不是学校停课申请。</p>
+    </form>
+  </div>
+
+  <div class="card" id="hist">
+    <h2>本机记录</h2>
+    <ul class="list" id="list"><li>暂无。先勾五项或记一条天况。</li></ul>
+  </div>
+  <footer>孙艺嘉（2024111013）· 操场停开核对单 · 路径 B · 不代替学校通知 · 不对外预警 · 不卖设备<br/>
+  https://hjw-create.github.io/sunyj-tingke-mvp/</footer>
+</div>
+<script>
+(function(){
+  var KEY='sunyj_tingke_v1';
+  var boxes=[].slice.call(document.querySelectorAll('#nodeForm input[type=checkbox]'));
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+  function save(list){localStorage.setItem(KEY,JSON.stringify(list.slice(0,40)));render()}
+  function stamp(){return new Date().toLocaleString('zh-CN',{hour12:false})}
+  function bar(){var n=boxes.filter(function(c){return c.checked}).length;document.getElementById('bar').style.width=(n/5*100)+'%';document.getElementById('barText').textContent='已看 '+n+' / 5'}
+  boxes.forEach(function(c){c.addEventListener('change',bar)});bar();
+  function render(){
+    var rows=load(),box=document.getElementById('list');
+    if(!rows.length){box.innerHTML='<li>暂无。先勾五项或记一条天况。</li>';return}
+    box.innerHTML=rows.map(function(r){return '<li><strong>'+r.type+'</strong> · '+r.summary+'<div class="hint">'+r.at+'</div></li>'}).join('');
+  }
+  document.getElementById('nodeForm').onsubmit=function(e){
+    e.preventDefault();
+    var err=document.getElementById('nodeErr');err.style.display='none';
+    if(!boxes.every(function(c){return c.checked})){err.textContent='五项都勾过再保存';err.style.display='block';return}
+    var fd=new FormData(e.target);
+    var list=load();
+    list.unshift({type:'停开核对',at:stamp(),summary:fd.get('kind')+' · '+fd.get('day')+' · '+fd.get('who')+' · 预报：'+(fd.get('fc')||'未填')});
+    save(list);
+  };
+  document.getElementById('obsForm').onsubmit=function(e){
+    e.preventDefault();
+    var fd=new FormData(e.target);
+    var list=load();
+    list.unshift({type:'当场天况',at:stamp(),summary:fd.get('see')+' · '+fd.get('dec')+' · '+(fd.get('note')||'无备注')});
+    save(list);
+  };
+  document.getElementById('bookForm').onsubmit=function(e){
+    e.preventDefault();
+    var err=document.getElementById('bookErr');err.style.display='none';
+    var fd=new FormData(e.target);
+    var phone=(fd.get('phone')||'').trim();
+    if(!/^1[3-9]\d{9}$/.test(phone)){err.textContent='请填写11位手机号';err.style.display='block';return}
+    var list=load();
+    list.unshift({type:'预约试填',at:stamp(),summary:fd.get('name')+' · '+phone+' · '+fd.get('slot')});
+    save(list);e.target.reset();
+  };
+  render();
+})();
+</script>
+</body>
+</html>
